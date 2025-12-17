@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(/img/background.png);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* adjust darkness */
+  z-index: -1; /* keeps it behind your content */
+}
+
+nav {
+  margin: 15px;
+  display: flex;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(242, 255, 0);
+  /* border: 1px solid rgb(163, 26, 255); */
+  border-radius: 20px;
+  height: 7vh;
+  /* box-shadow: 0px 0px 20px rgb(163, 26, 255); */
+  box-shadow: 0px 0px 20px rgb(242, 255, 0);
+}
+
+nav > .left {
+  display: flex;
+  align-items: center; /* vertical centering */
+  /* justify-content: center; */
+  width: 50%; /* optional: horizontal centering */
+  color: white;
+}
+
+nav > .left > h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 30px;
+}
+
+nav > .left > h1:hover {
+  cursor: pointer;
+  color: #d20000;
+  transition: 0.5s ease;
+}
+
+nav > .right {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+nav > .right > li {
+  list-style: none;
+  margin-right: 30px;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav > .right > li:hover {
+  color: rgb(0, 255, 55);
+  transition: 0.5s ease;
+}
+
+nav > .right > li:last-child {
+  margin-right: 30px;
+}
+
+.hero {
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89.5vh;
+}
+
+.hero > div > img {
+  background: transparent;
+  width: 1500px;
+  filter: drop-shadow(0px 0px 110px rgb(255, 0, 0));
+  /* backdrop-filter: blur(4px); */
+  /* filter: drop-shadow(0px 0px 70px rgb(242, 255, 0)); */
+  /* background-color: aqua; */
+  height: auto;
+}
