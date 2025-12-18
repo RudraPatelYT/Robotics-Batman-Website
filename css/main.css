@@ -1,93 +1,98 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  background-image: url(/img/background.png);
+  background-color: #0044ff;
 }
 
-body::before {
+nav > div {
+  display: flex;
+}
+nav > div > .left {
+  height: 100%;
+  width: 100%;
+  /* background-color: white; */
+}
+
+nav > div > .right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: aqua; */
+}
+
+nav > div > .right > li {
+  list-style: none;
+  /* width: 0%; */
+  height: 20%;
+  margin-right: 50px;
+  margin-top: 32.5px;
+  font-weight: bold;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+nav > div > .right > li:hover {
+  color: rgb(255, 251, 0);
+  /* text-decoration: underline; */
+}
+
+nav > div > .left > img {
+  /* filter: opacity(0.5); */
+  width: 6%;
+  height: 6%;
+  margin: 20px;
+  transition: all 0.5s ease;
+  padding-left: 50px;
+}
+
+nav > div > .left > img:hover {
+  cursor: pointer;
+  /* filter: opacity(1); */
+  transform: scale(1.2);
+}
+
+.main {
+  height: 89vh;
+  display: flex;
+  flex-direction: column; /* stack logo above tv */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically */
+  text-align: center;
+}
+
+.main-logo {
+  width: 75%;
+  height: 75%;
+
+  background: white;
+
+  -webkit-mask: url("/img/logo.png") center / contain no-repeat;
+  mask: url("/img/logo.png") center / contain no-repeat;
+
+  filter: drop-shadow(0px 0px 20px rgb(0, 0, 0));
+  position: relative;
+}
+
+.main-logo::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* adjust darkness */
-  z-index: -1; /* keeps it behind your content */
-}
+  filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
 
-nav {
-  margin: 15px;
-  display: flex;
-  width: auto;
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgb(242, 255, 0);
-  /* border: 1px solid rgb(163, 26, 255); */
-  border-radius: 20px;
-  height: 7vh;
-  /* box-shadow: 0px 0px 20px rgb(163, 26, 255); */
-  box-shadow: 0px 0px 20px rgb(242, 255, 0);
-}
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 
-nav > .left {
-  display: flex;
-  align-items: center; /* vertical centering */
-  /* justify-content: center; */
-  width: 50%; /* optional: horizontal centering */
-  color: white;
-}
+  pointer-events: none;
 
-nav > .left > h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 30px;
-}
-
-nav > .left > h1:hover {
-  cursor: pointer;
-  color: #d20000;
-  transition: 0.5s ease;
-}
-
-nav > .right {
-  display: flex;
-  color: white;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 1;
-}
-
-nav > .right > li {
-  list-style: none;
-  margin-right: 30px;
-  font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-nav > .right > li:hover {
-  color: rgb(0, 255, 55);
-  transition: 0.5s ease;
-}
-
-nav > .right > li:last-child {
-  margin-right: 30px;
-}
-
-.hero {
-  /* background-color: white; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 89.5vh;
-}
-
-.hero > div > img {
-  background: transparent;
-  width: 1500px;
-  filter: drop-shadow(0px 0px 110px rgb(255, 0, 0));
-  /* backdrop-filter: blur(4px); */
-  /* filter: drop-shadow(0px 0px 70px rgb(242, 255, 0)); */
-  /* background-color: aqua; */
-  height: auto;
+  -webkit-mask: url("/img/logo.png") center / contain no-repeat;
+  mask: url("/img/logo.png") center / contain no-repeat;
 }
