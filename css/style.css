@@ -45,7 +45,7 @@ nav > .left > h1 {
 nav > .left > h1:hover {
   cursor: pointer;
   color: #d20000;
-  transition: 0.5s ease;
+  transition: 0.7s ease;
 }
 
 nav > .right {
@@ -151,6 +151,7 @@ nav > .right > li:last-child {
 .hero > .kiosk > a > div,
 .hero > .media > a > div {
   text-align: center;
+  transition: 0.7s ease;
 }
 
 .hero > .programming > a > div > h3,
@@ -159,6 +160,21 @@ nav > .right > li:last-child {
 .hero > .media > a > div > h3 {
   font-size: 15px;
 }
+
+.hero > .programming > a > div > h1,
+.hero > .building > a > div > h1,
+.hero > .kiosk > a > div > h1,
+.hero > .media > a > div > h1 {
+  font-size: 50px;
+}
+
+.hero > .programming > a > div:hover,
+.hero > .building > a > div:hover,
+.hero > .kiosk > a > div:hover,
+.hero > .media > a > div:hover {
+  transform: scale(1.2) rotate(-5deg);
+}
+
 .hero > .programming {
   margin-left: -700px;
   margin-top: -275px;
