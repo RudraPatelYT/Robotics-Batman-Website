@@ -8,6 +8,10 @@ body {
   background-attachment: fixed;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body::before {
   content: "";
   position: absolute;
@@ -57,7 +61,9 @@ nav > .right {
   flex: 1;
 }
 
-nav > .right > li {
+nav > .right > a {
+  color: #fff;
+  text-decoration: none;
   list-style: none;
   margin-right: 30px;
   font-size: 20px;
@@ -66,12 +72,12 @@ nav > .right > li {
   font-weight: bold;
 }
 
-nav > .right > li:hover {
+nav > .right > a:hover {
   color: rgb(0, 255, 55);
   transition: 0.5s ease;
 }
 
-nav > .right > li:last-child {
+nav > .right > a:last-child {
   margin-right: 30px;
 }
 
@@ -200,7 +206,7 @@ nav > .right > li:last-child {
   opacity: 0;
   transform: translateY(20px); /* starts slightly lower */
   transition: 1s ease;
-  pointer-events: none; /* prevents clicking while hidden */
+  pointer-events: none;
 }
 
 .show {

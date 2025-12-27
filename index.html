@@ -12,12 +12,12 @@
         <h1>LaurenHill Academy</h1>
       </div>
       <div class="right">
-        <li>Home</li>
-        <li>About</li>
-        <li>CRC</li>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#video">Video</a>
       </div>
     </nav>
-    <div class="hero">
+    <div class="hero" id="home">
       <div class="img">
         <img src="/img/batman-logo-png-transparent-12.png" alt="" />
       </div>
@@ -59,27 +59,7 @@
         </a>
       </div>
     </div>
-    <div class="videoTab">
-      <div class="container">
-        <div class="left">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/x7PZ7KQvtIo?si=Xp5qLBgjlWE53gJk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="right">
-          <h1>Title of the video</h1>
-          <h3>Content of the video</h3>
-        </div>
-      </div>
-    </div>
-    <div class="lhaTab">
+    <div class="lhaTab hidden" id="about">
       <div class="container">
         <div class="top">
           <div class="left">
@@ -103,6 +83,27 @@
         </div>
       </div>
     </div>
+    <div class="videoTab hidden" id="video">
+      <div class="container">
+        <div class="left">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/x7PZ7KQvtIo?si=Xp5qLBgjlWE53gJk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="right">
+          <h1>Title of the video</h1>
+          <h3>Content of the video</h3>
+        </div>
+      </div>
+    </div>
+
     <script src="/js/index.js"></script>
   </body>
 </html>
